@@ -27,27 +27,27 @@ public class JoinEvent implements Listener {
 
             BufferedReader isproxy = new BufferedReader(new InputStreamReader(proxycheck));
 
-            String siema1 = isproxy.readLine();
-            String siema2 = isproxy.readLine();
-            String siema3 = isproxy.readLine();
-            String siema4 = isproxy.readLine();
-            String siema5 = isproxy.readLine();
-            String siema6 = isproxy.readLine();
-            String siema7 = isproxy.readLine();
-            String siema8 = isproxy.readLine();
-            String siema9 = isproxy.readLine();
-            String siema10 = isproxy.readLine();
-            String siema11 = isproxy.readLine();
-            String siema12 = isproxy.readLine();
-            String siema13 = isproxy.readLine();
-            String siema14 = isproxy.readLine();
-            String siema15 = isproxy.readLine();
-            String siema16 = isproxy.readLine();
-            String siema17 = isproxy.readLine();
-            String siema18 = isproxy.readLine();
+            String line1 = isproxy.readLine();
+            String line2 = isproxy.readLine();
+            String line3 = isproxy.readLine();
+            String line4 = isproxy.readLine();
+            String line5 = isproxy.readLine();
+            String line6 = isproxy.readLine();
+            String line7 = isproxy.readLine();
+            String line8 = isproxy.readLine();
+            String line9 = isproxy.readLine();
+            String line10 = isproxy.readLine();
+            String line11 = isproxy.readLine();
+            String line12 = isproxy.readLine();
+            String line13 = isproxy.readLine();
+            String line14 = isproxy.readLine();
+            String line15 = isproxy.readLine();
+            String line16 = isproxy.readLine();
+            String line17 = isproxy.readLine();
+            String line18 = isproxy.readLine();
 
 
-            if (siema12.contains("yes")) {
+            if (line12.contains("yes")) {
                 join.getPlayer().kickPlayer("[VPNDetector] You Using Proxy or VPN");
                 System.out.println("[VPNDetector] User " + join.getPlayer().getName() + " use VPN");
 
