@@ -1,0 +1,5 @@
+name: VPNDetector
+version: '${project.version}'
+main: vpndetector.vpndetector.VPNDetector
+authors: [ WojtreXPlayer ]
+description: AntiVPN Plugin
