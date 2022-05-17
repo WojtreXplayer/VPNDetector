@@ -11,6 +11,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Map;
 
 public class JoinEvent implements Listener {
     public JoinEvent(VPNDetector vpnDetector) {
@@ -19,35 +21,30 @@ public class JoinEvent implements Listener {
     @EventHandler
     public void JoinEvent(PlayerJoinEvent join) throws Exception {
         try {
+            int lengthoflines = 0;
 
             HttpURLConnection connection = (HttpURLConnection) new URL("https://proxycheck.io/v2/" + join.getPlayer().getAddress().getAddress().toString() + "?vpn=1&asn=1").openConnection();
             connection.setDoInput(true);
             InputStream proxycheck = connection.getInputStream();
 
 
+
             BufferedReader isproxy = new BufferedReader(new InputStreamReader(proxycheck));
-
-            String line1 = isproxy.readLine();
-            String line2 = isproxy.readLine();
-            String line3 = isproxy.readLine();
-            String line4 = isproxy.readLine();
-            String line5 = isproxy.readLine();
-            String line6 = isproxy.readLine();
-            String line7 = isproxy.readLine();
-            String line8 = isproxy.readLine();
-            String line9 = isproxy.readLine();
-            String line10 = isproxy.readLine();
-            String line11 = isproxy.readLine();
-            String line12 = isproxy.readLine();
-            String line13 = isproxy.readLine();
-            String line14 = isproxy.readLine();
-            String line15 = isproxy.readLine();
-            String line16 = isproxy.readLine();
-            String line17 = isproxy.readLine();
-            String line18 = isproxy.readLine();
+            String[] lines = new String[]{};
+            for(String lineslength = isproxy.readLine(); lineslength != null; lineslength = isproxy.readLine()){
+                lines[lengthoflines] = lineslength;
+                lengthoflines = lengthoflines + 1;
 
 
-            if (line12.contains("yes")) {
+
+            }
+
+
+
+
+
+
+            if (lines[12].contains("yes")) {
                 join.getPlayer().kickPlayer("[VPNDetector] You Using Proxy or VPN");
                 System.out.println("[VPNDetector] User " + join.getPlayer().getName() + " use VPN");
 
